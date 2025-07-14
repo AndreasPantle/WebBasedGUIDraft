@@ -1,0 +1,11 @@
+{
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.inlineSuggest.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+  },
+  "editor.quickSuggestions": {
+    "strings": true,
+  }
+}
