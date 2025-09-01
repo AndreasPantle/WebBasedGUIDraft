@@ -27,6 +27,10 @@ export default defineConfig({
         find: '@use',
         replacement: fileURLToPath(new URL('./src/use', import.meta.url)),
       },
+      {
+        find: '@helpers',
+        replacement: fileURLToPath(new URL('./src/helpers', import.meta.url)),
+      },
     ],
   },
   server: {
