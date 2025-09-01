@@ -26,16 +26,9 @@ export const useErrorStore = defineStore('error', {
 
     setErrorFromResponse(error) {
       if (error.response) {
-        this.setError(error.response.status
-        	+ '" -> "'
-        	+ error.response.data[constants.API_MESSAGE]
-        	+ '".');
+        this.setError(error.response.status + '" -> "' + error.response.data[constants.API_MESSAGE] + '".');
       } else if (error.message && error.code) {
-        this.setError('Can\'t get data from the backend: "'
-        	+ error.message
-        	+ '" -> "'
-        	+ error.code
-        	+ '". Is the backend running? / CORS activated?');
+        this.setError('Can\'t get data from the backend: "' + error.message + '" -> "' + error.code + '". Is the backend running? / CORS activated?');
       } else {
         this.setError(error);
       }
