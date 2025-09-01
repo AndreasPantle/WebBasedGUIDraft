@@ -44,7 +44,7 @@ export const useDummyStore = defineStore('dummy', {
         } else {
           /* The API returns the status entry with false or nothing. */
           this.products = null;
-          // UseErrorStore().setErrorFromResponse(response.data[constants.API_MESSAGE]);
+          // useErrorStore().setErrorFromResponse(response.data[constants.API_MESSAGE]);
         }
       } catch (error) {
         this.products = null;
