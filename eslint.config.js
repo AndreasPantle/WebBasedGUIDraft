@@ -1,25 +1,33 @@
-import config from 'eslint-config-xo';
-import xoSpace from 'eslint-config-xo/space';
-import {defineConfig} from 'eslint/config';
-import pluginVue from 'eslint-plugin-vue';
-import globals from 'globals';
+import js from "@eslint/js";
+import json from "eslint-plugin-json";
+import pluginVue from "eslint-plugin-vue";
+import skipFormatting from "@vue/eslint-config-prettier/skip-formatting";
+import globals from "globals";
 
-export default defineConfig(
-  [
-    config,
-    xoSpace,
-  ],
-  ...pluginVue.configs['flat/recommended'],
+export default [
+  js.configs.recommended,
+  json.configs.recommended,
+  ...pluginVue.configs["flat/recommended"],
+  skipFormatting,
+  {
+    name: "app/files-to-lint",
+    files: ["**/*.{vue}", "**/*.js", "**/*.json"],
+  },
+  {
+    name: "app/files-to-ignore",
+    ignores: ["**/dist/**", "**/dist-ssr/**", "**/coverage/**"],
+  },
   {
     rules: {
-      // Override/add rules settings here, such as:
+      // override/add rules settings here, such as:
       // 'vue/no-unused-vars': 'error'
+      semi: "error",
     },
     languageOptions: {
-      sourceType: 'module',
+      sourceType: "module",
       globals: {
         ...globals.browser,
       },
     },
   },
-);
+];
