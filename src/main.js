@@ -16,9 +16,6 @@ const vuetify = createVuetify({
   theme: {
     defaultTheme: 'light',
   },
-  options: {
-    customProperties: true,
-  },
   icons: {
     defaultSet: 'mdi',
     aliases,
