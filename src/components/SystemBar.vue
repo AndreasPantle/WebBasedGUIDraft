@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'SystemBar',
+  name: "SystemBar",
   setup() {
     return {};
   },

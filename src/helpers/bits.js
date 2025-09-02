@@ -1,5 +1,5 @@
 export function isBitSet(num, bitPosition) {
-  return Math.floor(num / (2 ** bitPosition)) % 2 !== 0;
+  return Math.floor(num / 2 ** bitPosition) % 2 !== 0;
 }
 
 export function setBit(num, bitPosition) {
@@ -13,5 +13,7 @@ export function clearBit(num, bitPosition) {
 }
 
 export function toggleBit(num, bitPosition) {
-  return isBitSet(num, bitPosition) ? clearBit(num, bitPosition) : setBit(num, bitPosition);
+  return isBitSet(num, bitPosition)
+    ? clearBit(num, bitPosition)
+    : setBit(num, bitPosition);
 }

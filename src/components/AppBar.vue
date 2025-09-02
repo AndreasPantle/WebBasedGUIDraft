@@ -1,9 +1,6 @@
 <template>
   <div>
-    <v-app-bar
-      flat
-      color="primary"
-    >
+    <v-app-bar flat color="primary">
       <v-app-bar-nav-icon
         variant="text"
         @click.stop="storeNavigation.setNavigationDrawerVisible"
@@ -32,13 +29,13 @@
 
 <script>
 /* Stores */
-import { useNavigationStore } from '@stores/nav';
+import { useNavigationStore } from "@stores/nav";
 
 /* Icons */
-import { mdiMemory, mdiCog } from '@mdi/js';
+import { mdiMemory, mdiCog } from "@mdi/js";
 
 export default {
-  name: 'AppBar',
+  name: "AppBar",
   setup() {
     const storeNavigation = useNavigationStore();
     return {

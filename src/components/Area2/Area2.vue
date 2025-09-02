@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Area2',
+  name: "Area2",
 };
 </script>
 

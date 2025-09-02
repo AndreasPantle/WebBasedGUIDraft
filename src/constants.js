@@ -6,5 +6,5 @@ Message depends on status.
   * If status is true, message contains the data from the backend.
     * If status is true and the operation succeed it can be ACK only.
 */
-export const API_STATUS = 'STATUS';
-export const API_MESSAGE = 'MESSAGE';
+export const API_STATUS = "STATUS";
+export const API_MESSAGE = "MESSAGE";

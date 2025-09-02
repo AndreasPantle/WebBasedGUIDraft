@@ -1,14 +1,14 @@
-import {defineStore} from 'pinia';
-import * as constants from '@/constants.js';
-import {useProgressStore} from '@stores/progress.js';
-import {useErrorStore} from '@stores/error.js';
-import axios from 'axios';
+import { defineStore } from "pinia";
+import * as constants from "@/constants.js";
+import { useProgressStore } from "@stores/progress.js";
+import { useErrorStore } from "@stores/error.js";
+import axios from "axios";
 
 /* URLs */
-const urlDummy = 'https://dummyjson.com/';
-const urlProducts = urlDummy + 'products/';
+const urlDummy = "https://dummyjson.com/";
+const urlProducts = urlDummy + "products/";
 
-export const useDummyStore = defineStore('dummy', {
+export const useDummyStore = defineStore("dummy", {
   state: () => ({
     products: null,
   }),
@@ -29,9 +29,9 @@ export const useDummyStore = defineStore('dummy', {
 
       try {
         const response = await axios({
-          method: 'get',
-          url: urlProducts + '?delay=1500',
-          timeout: __APP_TIMEOUT__,
+          method: "get",
+          url: urlProducts + "?delay=1500",
+          timeout: __APP_TIMEOUT__, // eslint-disable-line
         });
 
         useProgressStore().progressRequestDisable();

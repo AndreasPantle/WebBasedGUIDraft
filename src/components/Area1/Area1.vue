@@ -17,7 +17,7 @@
 import placeholder_image from "@assets/images/600x400.svg";
 
 export default {
-  name: 'Area1',
+  name: "Area1",
   setup() {
     return {
       placeholder_image,
