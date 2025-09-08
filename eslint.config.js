@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import css from "@eslint/css";
 import json from "eslint-plugin-json";
 import pluginVue from "eslint-plugin-vue";
 import skipFormatting from "@vue/eslint-config-prettier/skip-formatting";
@@ -7,11 +8,12 @@ import globals from "globals";
 export default [
   js.configs.recommended,
   json.configs.recommended,
+  css.configs.recommended,
   ...pluginVue.configs["flat/recommended"],
   skipFormatting,
   {
     name: "app/files-to-lint",
-    files: ["**/*.{vue}", "**/*.js", "**/*.json"],
+    files: ["**/*.{vue}", "**/*.js", "**/*.json", "**/*.css"],
   },
   {
     name: "app/files-to-ignore",
